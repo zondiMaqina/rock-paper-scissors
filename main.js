@@ -22,4 +22,11 @@ function getComputedChoice(){
     return randomChoice;
 }
 
-console.log(getComputedChoice());
+
+function RoundOne(playerSelection, computerSelection){
+
+}
+
+RoundOne(function(){
+    
+}, getComputedChoice)
