@@ -29,3 +29,11 @@ No styling is needed at the moment
 
 ##  Phase 2
 
+
+# Challenges 
+
+I struggled with knwing when to call a function and when i should not when using parameters and arguments
+
+
+if i use function as argument i should not add "()" if it is in the parenthesis it will instantly call it out
+
