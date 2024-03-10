@@ -25,8 +25,14 @@ function getComputedChoice(){
 
 function RoundOne(playerSelection, computerSelection){
 
+    
 }
 
 RoundOne(function(){
-    
+    let input = window.prompt("Enter your move Master")
+
+    let smallcase_input = input.toLocaleLowerCase().trimStart().trimEnd() ;
+
+    return smallcase_input ;
+
 }, getComputedChoice)
