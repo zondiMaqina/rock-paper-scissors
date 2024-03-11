@@ -62,12 +62,12 @@ function playGame(){
     let master_wins = 0;
     let totalWins = 0;
 
-    let playerSelection = input_case_insensitive
 
     for (let rounds = 1; rounds <= 5; rounds ++){
 
-        
+        let playerSelection = input_case_insensitive
         let computerSelection = getComputerChoice();  
+
         console.log(`round: ` + gameRound(playerSelection, computerSelection));    
         
         if (
@@ -79,10 +79,10 @@ function playGame(){
     }
 
     totalWins = master_wins;
-    console.log(`Your total wins are ${totalWins} Master!!!`)
+    console.log(`TOTAL: Your total wins are ${totalWins} Master!!!`)
 
     if (totalWins < 3){
-        console.log("You lose Master...")
+        console.log("You lose Master... GAME OVER")
     }else{
         console.log(`You win my master!!!`)
     }
