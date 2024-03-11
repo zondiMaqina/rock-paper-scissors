@@ -23,7 +23,7 @@ function getComputerChoice(){
 
 function checkWinner(playerSelection, computerSelection){
 
-    if (playerSelection == computerSelection){
+   if (playerSelection == computerSelection){
         return "It is a Tie Master"
     } else if (
         (playerSelection == "rock" && computerSelection == "scissors") ||
@@ -37,8 +37,9 @@ function checkWinner(playerSelection, computerSelection){
 }
 
 
+
 function gameRound(playerSelection, computerSelection){
-  
+
     const returnValue = checkWinner(playerSelection, computerSelection);
 
 
@@ -58,12 +59,34 @@ function playGame(){
 
     let input_case_insensitive = input.toLocaleLowerCase()
 
+    let master_wins = 0;
+    let totalWins = 0;
+
+    let playerSelection = input_case_insensitive
+
     for (let rounds = 1; rounds <= 5; rounds ++){
 
-        let playerSelection = input_case_insensitive
+        
         let computerSelection = getComputerChoice();  
-        console.log(gameRound(playerSelection, computerSelection));      
+        console.log(`round: ` + gameRound(playerSelection, computerSelection));    
+        
+        if (
+            (gameRound(playerSelection, computerSelection) == `You win Master! ${playerSelection} beats ${computerSelection}`)
+        ){
+            master_wins += 1;
+            
+        }
+    }
+
+    totalWins = master_wins;
+    console.log(`Your total wins are ${totalWins} Master!!!`)
+
+    if (totalWins < 3){
+        console.log("You lose Master...")
+    }else{
+        console.log(`You win my master!!!`)
     }
 }
+
 
 playGame()
