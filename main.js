@@ -20,3 +20,12 @@ function getComputerChoice(){
     return random_choice
 }
 
+
+function gameRound(playerSelection, computerSelection){
+
+
+}
+
+let playerSelection = "rock"
+let computerSelection = getComputerChoice();
+
