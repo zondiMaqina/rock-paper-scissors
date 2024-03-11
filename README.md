@@ -27,6 +27,11 @@ i will first create my PseudoCode to get all the coreect steps i am going tot ta
 
 No styling is needed at the moment
 
+I should store function invoking in variables
+do not define all variables locally,
+
+Parameters can be global variables !! 
+
 ##  Phase 2
 
 
