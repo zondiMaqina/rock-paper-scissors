@@ -31,7 +31,7 @@ I should store function invoking in variables
 do not define all variables locally,
 
 Parameters can be global variables !! 
-
+Calling function more than ONCE makes makes its previous value get rewritten
 ##  Phase 2
 
 
