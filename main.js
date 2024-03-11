@@ -20,12 +20,37 @@ function getComputerChoice(){
     return random_choice
 }
 
+const playerSelection = "rock"
+const computerSelection = getComputerChoice();
+
+
+function checkWinner(){
+
+    if (playerSelection == computerSelection){
+        return "It is a Tie Master"
+    } else if (
+        (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "scissors" && computerSelection == "paper") ||
+        (playerSelection == "paper" && computerSelection == "rock")
+    ){
+        return "Master"
+    } else{
+        return "Computor"
+    }
+}
+
+let returnValue = checkWinner();
+
 
 function gameRound(playerSelection, computerSelection){
 
-
+    if (returnValue == "It is a Tie Master"){
+        return `You lose Master: ${playerSelection} equals ${computerSelection}... TRY AGAIN`
+    } else if (returnValue == "Master"){
+        return `You win Master! ${playerSelection} beats ${computerSelection}`
+    } else if (returnValue == "Computor"){
+        return `Master you lose! ${computerSelection} beats ${playerSelection}`
+    }
+    
 }
-
-let playerSelection = "rock"
-let computerSelection = getComputerChoice();
 
