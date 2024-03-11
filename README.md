@@ -32,6 +32,8 @@ do not define all variables locally,
 
 Parameters can be global variables !! 
 Calling function more than ONCE makes makes its previous value get rewritten
+
+I should practise more on using parameters frquently
 ##  Phase 2
 
 
