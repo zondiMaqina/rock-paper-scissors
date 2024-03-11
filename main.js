@@ -10,21 +10,18 @@
 //  computor slecetion choice
 //  function must respond with:
 //  "You win" or "You lose" or "Its a Tie"
+// function to play game as many times as you want
 
+let computor_choices = ["rock", "paper", "scissors"] ;
 
 function getComputerChoice(){
-    let computor_choices = ["rock", "paper", "scissors"] ;
-
     let random_choice = computor_choices[Math.floor(Math.random() * computor_choices.length)]
 
     return random_choice
-}
-
-const playerSelection = "rock"
-const computerSelection = getComputerChoice();
+}    
 
 
-function checkWinner(){
+function checkWinner(playerSelection, computerSelection){
 
     if (playerSelection == computerSelection){
         return "It is a Tie Master"
@@ -39,18 +36,34 @@ function checkWinner(){
     }
 }
 
-let returnValue = checkWinner();
-
 
 function gameRound(playerSelection, computerSelection){
+  
+    const returnValue = checkWinner(playerSelection, computerSelection);
+
 
     if (returnValue == "It is a Tie Master"){
         return `You lose Master: ${playerSelection} equals ${computerSelection}... TRY AGAIN`
     } else if (returnValue == "Master"){
         return `You win Master! ${playerSelection} beats ${computerSelection}`
     } else if (returnValue == "Computor"){
-        return `Master you lose! ${computerSelection} beats ${playerSelection}`
+        return `Master you lose! ${computerSelection} beats ${playerSelection} Computor Wins`
     }
     
 }
 
+function playGame(){
+
+    let input = window.prompt("Enter your Move Master")
+
+    let input_case_insensitive = input.toLocaleLowerCase()
+
+    for (let rounds = 1; rounds <= 5; rounds ++){
+
+        let playerSelection = input_case_insensitive
+        let computerSelection = getComputerChoice();  
+        console.log(gameRound(playerSelection, computerSelection));      
+    }
+}
+
+playGame()
